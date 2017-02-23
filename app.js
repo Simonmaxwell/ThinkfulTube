@@ -25,8 +25,9 @@ $(document).ready(function() {
 			for(var i =0; i < data.items.length; i++) {
 				var thumbnail = data.items[i].snippet.thumbnails.default.url;
 				var clickable = EMBED + data.items[i].id.videoId;
+				
 				var html = "";
-				html += "<div>";
+				html += `<div class="result-box">`;
 				html += "<h3>" + data.items[i].snippet.title + "</h3>";
 				html += `<a href='${clickable}'> <img src='${thumbnail}'> </a>`
 				$("#results").append(html);
